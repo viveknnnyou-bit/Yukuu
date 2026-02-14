@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yukuu ❤️</title>
+
+<style>
+body {
+  margin:0;
+  padding:0;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  font-family: 'Segoe UI';
+  overflow:hidden;
+  text-align:center;
+}
+
+.love-img {
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid white;
+  box-shadow:0 0 30px rgba(255,0,102,0.8);
+  animation: pulse 2s infinite;
+  margin-top:40px;
+}
+
+h1 { color:white; }
+h2 { color:white; }
+
+.msg {
+  color:white;
+  font-size:18px;
+  margin:15px;
+}
+
+button {
+  padding:15px 25px;
+  font-size:18px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  margin:10px;
+}
+
+#yesBtn {
+  background:#ff3366;
+  color:white;
+}
+
+#noBtn {
+  background:white;
+  color:#ff3366;
+  position:fixed;
+}
+
+@keyframes pulse {
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+.heart {
+  position:fixed;
+  bottom:-10px;
+  font-size:20px;
+  animation: float 5s linear infinite;
+  color:white;
+}
+
+@keyframes float {
+  0%{transform:translateY(0) scale(1);opacity:1}
+  100%{transform:translateY(-100vh) scale(1.5);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<img src="https://l.instagram.com/?u=https%3A%2F%2Fibb.co%2FhRF2FSxj&e=AT0QpPwGKsTHoIpPCw__XWqUa2dFh4q9Nwgie7sO5Dpun-za7mu4bNIQDmiCQvXKQSiJa-16tR4wfT4HqFP0fHaXL35dlPRjcMIaM4lguSKgXY1QgrsoW99edwIaTrT55dyDe2nqcc9g" class="love-img">
+
+<h1>Yukuu 💖</h1>
+<h2>Will You Be My Valentine?</h2>
+
+<p class="msg">
+From the moment you came into my life…<br>
+Everything became magical ✨<br>
+My heart chose you ❤️
+</p>
+
+<button id="yesBtn">YES ❤️</button>
+<button id="noBtn">NO 🙈</button>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+function moveButton(){
+  let x = Math.random() * (window.innerWidth - 100);
+  let y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.left = `${x}px`;
+  noBtn.style.top = `${y}px`;
+}
+
+noBtn.addEventListener("touchstart", moveButton);
+noBtn.addEventListener("mouseover", moveButton);
+
+// ✅ Snapchat Redirect
+document.getElementById("yesBtn").onclick = () => {
+  window.location.href = "https://www.snapchat.com/add/vivekkkk2424";
+}
+
+setInterval(()=>{
+  let heart = document.createElement("div");
+  heart.innerHTML="❤️";
+  heart.classList.add("heart");
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=Math.random()*20+20+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),5000);
+},300);
+</script>
+
+</body>
+</html>
